@@ -20,12 +20,17 @@ public class MethodOverloading {
 
 
     public static double calcFeetAndInchesToCentimeters(double inches) {
+
         if (inches >= 0) {
-            centimeters = inches / 0.39370;
-            System.out.println(centimeters);
-            return centimeters;
+            int feet =(int) inches / 12;
+            int remainingInches=(int) inches%12;
+
+            System.out.println(inches+" = "+feet+"feet "+remainingInches+" remaining inches");
+
+            return calcFeetAndInchesToCentimeters(feet,remainingInches);
 
         } else {
+            System.out.println("Invalid inches");
             return -1;
         }
 

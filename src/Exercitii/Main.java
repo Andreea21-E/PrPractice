@@ -66,6 +66,13 @@ public class Main {
         MethodOverloading.calcFeetAndInchesToCentimeters(0,1);
         MethodOverloading.calcFeetAndInchesToCentimeters(6,-10);
         MethodOverloading.calcFeetAndInchesToCentimeters(6,0);
+        MethodOverloading.calcFeetAndInchesToCentimeters(-10,-90);
+        MethodOverloading.calcFeetAndInchesToCentimeters(6,13);
+
+
+        MethodOverloading.calcFeetAndInchesToCentimeters(100);
+        MethodOverloading.calcFeetAndInchesToCentimeters(157);
+        MethodOverloading.calcFeetAndInchesToCentimeters(-10);
     }
 }
 
