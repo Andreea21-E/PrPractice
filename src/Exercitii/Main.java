@@ -82,15 +82,28 @@ public class Main {
 //        int seconds=MinuteSecond.getDurationString(120);
 //        System.out.println(seconds);
 
-//        System.out.println("*****Average of the array {1, 7, 3, 10, 9}*****");
-//        Array.AverageValue(new int[]{1, 7, 3, 10, 9});
-//        System.out.println("****Odd numbers  from the array new int[]{1, 7, 3, 10, 9} ******");
-//        Array.oddNumbersArray(new int[]{1, 7, 3, 10, 9});
-//        Array.reverseArray();
+        System.out.println("*****Average of the array {1, 7, 3, 10, 9}*****");
+        Array.AverageValue(new int[]{1, 7, 3, 10, 9});
+        System.out.println("****Odd numbers  from the array new int[]{1, 7, 3, 10, 9} ******");
+        Array.oddNumbersArray(new int[]{1, 7, 3, 10, 9});
+        Array.reverseArray();
 
 
+        System.out.println("*****Time*****");
         System.out.println(Time.getStringTime(366, 59));
         System.out.println(Time.getStringTime(3758));
+
+
+        System.out.println("*****Area Circle *****");
+        System.out.println(Area.calculeteArea(5.0));
+        double roundedArea=Area.calculeteArea(5.0);
+        System.out.println(String.format("%.4f", roundedArea));
+        System.out.println(Area.calculeteArea(-3));
+        System.out.println(Area.calculeteArea(0));
+
+        System.out.println("*****Area rectangle *****");
+        System.out.println(Area.calculeteArea(5.0, 4.0));
+        System.out.println(Area.calculeteArea(-5.0, 4.0));
     }
 }
 
