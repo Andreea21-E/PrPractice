@@ -1,4 +1,4 @@
-package Exercitii;
+package Exercitii.Section4;
 
 public class TeenNumberChecker {
     public static Boolean hasTeen(int firstNumber,int secondNumber, int thirdNumber){

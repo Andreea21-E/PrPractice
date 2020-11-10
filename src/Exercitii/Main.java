@@ -1,5 +1,7 @@
 package Exercitii;
 
+import Exercitii.Section4.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -104,6 +106,35 @@ public class Main {
         System.out.println("*****Area rectangle *****");
         System.out.println(Area.calculeteArea(5.0, 4.0));
         System.out.println(Area.calculeteArea(-5.0, 4.0));
+
+
+
+        System.out.println("*****Minutes to years and days *****");
+
+        MinutesToYear_DaysCalculator.printYearsAndDays(525600);
+        MinutesToYear_DaysCalculator.printYearsAndDays(1051200);
+        MinutesToYear_DaysCalculator.printYearsAndDays(561600);
+
+
+        System.out.println("\n"+"*****Equality Printer*****");
+        EqualityPrinter.printEqual(1,-1,1);
+        EqualityPrinter.printEqual(0,0,0);
+        EqualityPrinter.printEqual(1,0,0);
+        EqualityPrinter.printEqual(1,2,3);
+
+
+        System.out.println("\n"+"***** Playing Cat *****");
+
+       Boolean playingCat1= PlaingCat.isCatPlaying(true,10);
+        System.out.println(playingCat1);
+
+        Boolean playingCat2= PlaingCat.isCatPlaying(false,36);
+        System.out.println(playingCat2);
+
+        Boolean playingCat3= PlaingCat.isCatPlaying(false,35);
+        System.out.println(playingCat3);
+
+
     }
 }
 

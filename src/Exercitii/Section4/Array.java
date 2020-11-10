@@ -1,4 +1,4 @@
-package Exercitii;
+package Exercitii.Section4;
 
 public class Array {
 //    Write a Java program to calculate the

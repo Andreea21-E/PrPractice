@@ -1,4 +1,4 @@
-package Exercitii;
+package Exercitii.Section4;
 
 public class Convertor {
     public static void printMegaBytesAndKiloBytes(int kiloBytes) {

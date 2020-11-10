@@ -1,4 +1,4 @@
-package Exercitii;
+package Exercitii.Section4;
 
 public class SpeedConverter {
     public static void main(String[] args) {

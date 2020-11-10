@@ -1,4 +1,4 @@
-package Exercitii;
+package Exercitii.Section4;
 
 public class GameExemple {
     public static void main(String[] args) {
