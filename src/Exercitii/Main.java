@@ -1,6 +1,7 @@
 package Exercitii;
 
 import Exercitii.Section4.*;
+import Exercitii.Section5.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -98,7 +99,7 @@ public class Main {
 
         System.out.println("*****Area Circle *****");
         System.out.println(Area.calculeteArea(5.0));
-        double roundedArea=Area.calculeteArea(5.0);
+        double roundedArea = Area.calculeteArea(5.0);
         System.out.println(String.format("%.4f", roundedArea));
         System.out.println(Area.calculeteArea(-3));
         System.out.println(Area.calculeteArea(0));
@@ -108,7 +109,6 @@ public class Main {
         System.out.println(Area.calculeteArea(-5.0, 4.0));
 
 
-
         System.out.println("*****Minutes to years and days *****");
 
         MinutesToYear_DaysCalculator.printYearsAndDays(525600);
@@ -116,25 +116,73 @@ public class Main {
         MinutesToYear_DaysCalculator.printYearsAndDays(561600);
 
 
-        System.out.println("\n"+"*****Equality Printer*****");
-        EqualityPrinter.printEqual(1,-1,1);
-        EqualityPrinter.printEqual(0,0,0);
-        EqualityPrinter.printEqual(1,0,0);
-        EqualityPrinter.printEqual(1,2,3);
+        System.out.println("\n" + "*****Equality Printer*****");
+        EqualityPrinter.printEqual(1, -1, 1);
+        EqualityPrinter.printEqual(0, 0, 0);
+        EqualityPrinter.printEqual(1, 0, 0);
+        EqualityPrinter.printEqual(1, 2, 3);
 
 
-        System.out.println("\n"+"***** Playing Cat *****");
+        System.out.println("\n" + "***** Playing Cat *****");
 
-       Boolean playingCat1= PlaingCat.isCatPlaying(true,10);
+        Boolean playingCat1 = PlaingCat.isCatPlaying(true, 10);
         System.out.println(playingCat1);
 
-        Boolean playingCat2= PlaingCat.isCatPlaying(false,36);
+        Boolean playingCat2 = PlaingCat.isCatPlaying(false, 36);
         System.out.println(playingCat2);
 
-        Boolean playingCat3= PlaingCat.isCatPlaying(false,35);
+        Boolean playingCat3 = PlaingCat.isCatPlaying(false, 35);
         System.out.println(playingCat3);
 
 
+        System.out.println("\n" + "***** Swich Statemt *****");
+
+        SwichEx.switchStatement(1);
+        SwichEx.switchStatement(2);
+        SwichEx.switchStatement(3);
+        SwichEx.switchStatement(4);
+        SwichEx.switchStatement(5);
+        SwichEx.switchStatement(10);
+        System.out.println("\n");
+
+        SwichEx.switchAlphabet('A');
+        SwichEx.switchAlphabet('B');
+        SwichEx.switchAlphabet('C');
+        SwichEx.switchAlphabet('D');
+        SwichEx.switchAlphabet('E');
+        SwichEx.switchAlphabet('W');
+
+
+        SwichEx.switchSeasons("SuMmeR");
+
+        System.out.println("\n" + "***** Day of the week *****");
+        DayOfTheWeek.printDayOfTheWeek(-1);
+        DayOfTheWeek.printDayOfTheWeekWithIfStatement(1);
+
+
+        System.out.println("\n" + "***** Number from 0 to 9 *****");
+        NumberInWord.printNumberInWord(-1);
+        NumberInWord.printNumberInWord(0);
+        NumberInWord.printNumberInWord(9);
+        NumberInWord.printNumberInWord(10);
+
+
+        System.out.println("\n" + "***** Leap year: *****");
+        System.out.println(Leap_Year.isLeapYear(-1600));
+        System.out.println(Leap_Year.isLeapYear(1600));
+        System.out.println(Leap_Year.isLeapYear(2017));
+        System.out.println(Leap_Year.isLeapYear(2000));
+
+
+        System.out.println("\n" + "***** Bank interest *****");
+        BankInterest.printInterest();
+
+
+        System.out.println("\n" + "***** Prime Numbers *****");
+        PrimeNumber.findTheFirstThreePrimeNumber();
+
+        System.out.println("\n" + "*****  The sum of the first 5 numbers  divide by 3 and 5*****");
+        ForExercise.sumOfTheFirstFiveNumbersDivideBy3And5();
     }
 }
 
