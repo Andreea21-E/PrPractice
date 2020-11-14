@@ -183,6 +183,29 @@ public class Main {
 
         System.out.println("\n" + "*****  The sum of the first 5 numbers  divide by 3 and 5*****");
         ForExercise.sumOfTheFirstFiveNumbersDivideBy3And5();
+
+//
+//        System.out.println(new SumOdd().calculateSumOdd(100, 100));
+//        System.out.println(new SumOdd().calculateSumOdd(13, 13));
+//        System.out.println(new SumOdd().calculateSumOdd(1, 100));
+
+
+        System.out.println("\n" + "*****  The sum of the odd number*****");
+        System.out.println(SumOdd.calculateSumOdd(1, 100));
+        System.out.println(SumOdd.calculateSumOdd(-1, 100));
+        System.out.println(SumOdd.calculateSumOdd(100, 100));
+        System.out.println( SumOdd.calculateSumOdd(13, 13));
+        System.out.println( SumOdd.calculateSumOdd(100, -100));
+        System.out.println( SumOdd.calculateSumOdd(100, 1000));
+
+        System.out.println("\n" + "*****  The even number with while *****");
+        WhileExercise.isEvenNumber(11);
+        WhileExercise.printEvenNumbers(2,25);// it will not include the first number, 2 in this case
+
+
+        System.out.println("\n" + "*****  The sum of the digits *****");
+        System.out.println(new DigitSum().printsumDigits(32123));
+        System.out.println(new DigitSum().printsumDigits(1526));
     }
 }
 
