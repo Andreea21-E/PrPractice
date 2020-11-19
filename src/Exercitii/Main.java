@@ -2,6 +2,7 @@ package Exercitii;
 
 import Exercitii.Section4.*;
 import Exercitii.Section5.*;
+import Exercitii.Section6.Calculator;
 
 public class Main {
     public static void main(String[] args) {
@@ -206,6 +207,20 @@ public class Main {
         System.out.println("\n" + "*****  The sum of the digits *****");
         System.out.println(new DigitSum().printsumDigits(32123));
         System.out.println(new DigitSum().printsumDigits(1526));
+
+        System.out.println("\n" + "*****  Section 6 *****");
+        System.out.println("\n" + "*****  Calculator *****");
+
+        Calculator calculator= new Calculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("Add="+calculator.getAdditionResult());
+        System.out.println("Subtract="+calculator.getSubtractionResult());
+
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("Multiply="+calculator.getMultiplicationResult());
+        System.out.println("Divide="+calculator.getDivisionResult());
     }
 }
 
