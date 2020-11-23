@@ -2,7 +2,9 @@ package Exercitii;
 
 import Exercitii.Section4.*;
 import Exercitii.Section5.*;
+import Exercitii.Section6.BankAccount;
 import Exercitii.Section6.Calculator;
+import Exercitii.Section6.Person;
 
 public class Main {
     public static void main(String[] args) {
@@ -221,6 +223,30 @@ public class Main {
         calculator.setSecondNumber(0);
         System.out.println("Multiply="+calculator.getMultiplicationResult());
         System.out.println("Divide="+calculator.getDivisionResult());
+
+
+        System.out.println("\n" + "*****  Person *****");
+        Person person= new Person();
+        person.setFirstName("");
+        person.setLastName("");
+        person.setAge(10);
+        System.out.println("Full name = "+person.getFullName());
+        System.out.println("Full name = "+person.isTeen());
+        person.setFirstName("John");
+        person.setAge(18);
+        System.out.println("Full name = "+person.getFullName());
+        System.out.println("Full name = "+person.isTeen());
+        person.setLastName("Smith");
+        System.out.println("Full name = "+person.getFullName());
+
+
+        System.out.println("\n" + "*****  Bank Acount *****");
+        BankAccount bankAccount=new BankAccount();
+        bankAccount.getWithdrawFund(50);
+
+        bankAccount.setBalance(100);
+        bankAccount.getDepositFund(60);
+        bankAccount.getWithdrawFund(30);
     }
 }
 
