@@ -2,10 +2,35 @@ package Exercitii.Section6;
 
 public class BankAccount {
     private String accountNumber;
-    private double balance;
     private String customerName;
     private String customerEmail;
     private String customerPhoneNumber;
+    private double balance;
+
+
+    public BankAccount() {
+        this("default number","Default name","default email","074..", 0.00);
+        System.out.println("Empty constructor called");
+    }
+    public BankAccount(String accountNumber, String customerName, String customerEmail, String customerPhoneNumber, double balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhoneNumber = customerPhoneNumber;
+        System.out.println("\n"+"Account number: "+ accountNumber+"\n"
+       +"Customer Name:"+customerName+"\n"
+                +"Email: "+customerEmail+"\n"
+                +"Phone Number: "+customerPhoneNumber+"\n"
+                +"Balance: "+balance +"\n");
+    }
+
+    public BankAccount(String customerName, String customerEmail, String customerPhoneNumber) {
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhoneNumber = customerPhoneNumber;
+    }
+
 
     public void getDepositFund(double depositFund){
         this.balance=balance+depositFund;

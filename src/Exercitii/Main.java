@@ -2,9 +2,7 @@ package Exercitii;
 
 import Exercitii.Section4.*;
 import Exercitii.Section5.*;
-import Exercitii.Section6.BankAccount;
-import Exercitii.Section6.Calculator;
-import Exercitii.Section6.Person;
+import Exercitii.Section6.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -241,12 +239,32 @@ public class Main {
 
 
         System.out.println("\n" + "*****  Bank Acount *****");
-        BankAccount bankAccount=new BankAccount();
+        BankAccount bankAccount=new BankAccount("123","Gigi","gigi@yahhoo.com","0745320189",0);
+
         bankAccount.getWithdrawFund(50);
+
+//        bankAccount.setAccountNumber("1235432");
+//        bankAccount.setCustomerName("Alin");
+//        bankAccount.setEmail("alin.2@yahoo.com");
+//        bankAccount.setCustomerPhoneNumber("0723883647");
 
         bankAccount.setBalance(100);
         bankAccount.getDepositFund(60);
         bankAccount.getWithdrawFund(30);
+
+        BankAccount myBankAccount= new BankAccount();
+        System.out.println(myBankAccount);
+
+//        VipCustomer vipCustomer=new VipCustomer("Tom",50.000, "tom@yahho.com");
+
+        System.out.println("\n"+"*****  Wall area *****");
+        WallArea wallArea=new WallArea(5,4);
+        System.out.println( "\n"+"Area:"+ wallArea.getArea());
+        wallArea.setWidth(-1);
+        System.out.println( "Width:"+ wallArea.getWidth());
+        wallArea.setHeight(-1);
+        System.out.println( "Heigh:"+ wallArea.getHeight());
+        System.out.println( "Area:"+ wallArea.getArea());
     }
 }
 
