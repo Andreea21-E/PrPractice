@@ -32,13 +32,15 @@ public class Point {
 
 //TODO - the distance between the point in this class
 
-//    public double distanceWithoutAnyParameters(){
-//        double distance =(point.getX() - point1.getX())*(point.getX() - point1.getX())+(point.getY() - point1.getY())*(point.getY() - point1.getY());
-//        return ;
-//    }
+    public double distanceBetweenThisPointAndZeroPoint (){
+        double distance =Math.sqrt(this.x*this.x+this.y*this.y);
+        return distance ;
+    }
 
-    public double distanceXY(int x, int y){
-        return x-y;
+    public double calculateDistanceXY(int x, int y)
+    {
+        double distanceXY =Math.sqrt((this.x-x)*(this.x-x)+(this.y-y)*(this.y-y));
+        return distanceXY;
     }
 
 

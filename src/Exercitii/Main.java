@@ -195,13 +195,13 @@ public class Main {
         System.out.println(SumOdd.calculateSumOdd(1, 100));
         System.out.println(SumOdd.calculateSumOdd(-1, 100));
         System.out.println(SumOdd.calculateSumOdd(100, 100));
-        System.out.println( SumOdd.calculateSumOdd(13, 13));
-        System.out.println( SumOdd.calculateSumOdd(100, -100));
-        System.out.println( SumOdd.calculateSumOdd(100, 1000));
+        System.out.println(SumOdd.calculateSumOdd(13, 13));
+        System.out.println(SumOdd.calculateSumOdd(100, -100));
+        System.out.println(SumOdd.calculateSumOdd(100, 1000));
 
         System.out.println("\n" + "*****  The even number with while *****");
         WhileExercise.isEvenNumber(11);
-        WhileExercise.printEvenNumbers(2,25);// it will not include the first number, 2 in this case
+        WhileExercise.printEvenNumbers(2, 25);// it will not include the first number, 2 in this case
 
 
         System.out.println("\n" + "*****  The sum of the digits *****");
@@ -211,35 +211,35 @@ public class Main {
         System.out.println("\n" + "*****  Section 6 *****");
         System.out.println("\n" + "*****  Calculator *****");
 
-        Calculator calculator= new Calculator();
+        Calculator calculator = new Calculator();
         calculator.setFirstNumber(5.0);
         calculator.setSecondNumber(4);
-        System.out.println("Add="+calculator.getAdditionResult());
-        System.out.println("Subtract="+calculator.getSubtractionResult());
+        System.out.println("Add=" + calculator.getAdditionResult());
+        System.out.println("Subtract=" + calculator.getSubtractionResult());
 
         calculator.setFirstNumber(5.25);
         calculator.setSecondNumber(0);
-        System.out.println("Multiply="+calculator.getMultiplicationResult());
-        System.out.println("Divide="+calculator.getDivisionResult());
+        System.out.println("Multiply=" + calculator.getMultiplicationResult());
+        System.out.println("Divide=" + calculator.getDivisionResult());
 
 
         System.out.println("\n" + "*****  Person *****");
-        Person person= new Person();
+        Person person = new Person();
         person.setFirstName("");
         person.setLastName("");
         person.setAge(10);
-        System.out.println("Full name = "+person.getFullName());
-        System.out.println("Full name = "+person.isTeen());
+        System.out.println("Full name = " + person.getFullName());
+        System.out.println("Full name = " + person.isTeen());
         person.setFirstName("John");
         person.setAge(18);
-        System.out.println("Full name = "+person.getFullName());
-        System.out.println("Full name = "+person.isTeen());
+        System.out.println("Full name = " + person.getFullName());
+        System.out.println("Full name = " + person.isTeen());
         person.setLastName("Smith");
-        System.out.println("Full name = "+person.getFullName());
+        System.out.println("Full name = " + person.getFullName());
 
 
         System.out.println("\n" + "*****  Bank Acount *****");
-        BankAccount bankAccount=new BankAccount("123","Gigi","gigi@yahhoo.com","0745320189",0);
+        BankAccount bankAccount = new BankAccount("123", "Gigi", "gigi@yahhoo.com", "0745320189", 0);
 
         bankAccount.getWithdrawFund(50);
 
@@ -252,30 +252,45 @@ public class Main {
         bankAccount.getDepositFund(60);
         bankAccount.getWithdrawFund(30);
 
-        BankAccount myBankAccount= new BankAccount();
+        BankAccount myBankAccount = new BankAccount();
         System.out.println(myBankAccount);
 
 //        VipCustomer vipCustomer=new VipCustomer("Tom",50.000, "tom@yahho.com");
 
-        System.out.println("\n"+"*****  Wall area *****");
-        WallArea wallArea=new WallArea(5,4);
-        System.out.println( "\n"+"Area:"+ wallArea.getArea());
+        System.out.println("\n" + "*****  Wall area *****");
+        WallArea wallArea = new WallArea(5, 4);
+        System.out.println("\n" + "Area:" + wallArea.getArea());
         wallArea.setHeight(-1.5);
 //        wallArea.setWidth(-1);
-        System.out.println( "Width:"+ wallArea.getWidth());
+        System.out.println("Width:" + wallArea.getWidth());
 
-        System.out.println( "Heigh:"+ wallArea.getHeight());
-        System.out.println( "Area:"+ wallArea.getArea());
-
-
-        System.out.println("\n"+"*****  Point *****");
+        System.out.println("Heigh:" + wallArea.getHeight());
+        System.out.println("Area:" + wallArea.getArea());
 
 
-        Point point= new Point(6,5);
-        Point point1= new Point(3,1);
+        System.out.println("\n" + "*****  Point *****");
 
-int distance=(point.getX() - point1.getX())*(point.getX() - point1.getX())+(point.getY() - point1.getY())*(point.getY() - point1.getY());
-        System.out.println(Math.sqrt(distance));
+        Point first = new Point(6, 5);
+        Point second = new Point(3, 1);
+        System.out.println("distance(0,0)=" + first.distanceBetweenThisPointAndZeroPoint());
+        System.out.println("distance(second)=" + first.calculateDistanceXY(second.getX(), second.getY()));
+        System.out.println("distance(2,2)=" + first.calculateDistanceXY(2, 2));
+
+        Point point = new Point();
+        System.out.println("point distance" + point.distanceBetweenThisPointAndZeroPoint());
+
+
+        System.out.println("\n" + "*****  Carpet cost *****");
+
+        Carpet carpet = new Carpet(3.5);
+        Floor floor = new Floor(2.75, 4.0);
+        CarpetCalculator carpetCalculator = new CarpetCalculator(floor, carpet);
+        System.out.println("Total cost=" + carpetCalculator.getTotalCost());
+
+        carpet = new Carpet(1.5);
+        floor = new Floor(5.4, 4.5);
+        carpetCalculator = new CarpetCalculator(floor, carpet);
+        System.out.println("total=" + carpetCalculator.getTotalCost());
     }
 }
 
