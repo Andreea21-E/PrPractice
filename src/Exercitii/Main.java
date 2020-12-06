@@ -260,11 +260,22 @@ public class Main {
         System.out.println("\n"+"*****  Wall area *****");
         WallArea wallArea=new WallArea(5,4);
         System.out.println( "\n"+"Area:"+ wallArea.getArea());
-        wallArea.setWidth(-1);
+        wallArea.setHeight(-1.5);
+//        wallArea.setWidth(-1);
         System.out.println( "Width:"+ wallArea.getWidth());
-        wallArea.setHeight(-1);
+
         System.out.println( "Heigh:"+ wallArea.getHeight());
         System.out.println( "Area:"+ wallArea.getArea());
+
+
+        System.out.println("\n"+"*****  Point *****");
+
+
+        Point point= new Point(6,5);
+        Point point1= new Point(3,1);
+
+int distance=(point.getX() - point1.getX())*(point.getX() - point1.getX())+(point.getY() - point1.getY())*(point.getY() - point1.getY());
+        System.out.println(Math.sqrt(distance));
     }
 }
 
