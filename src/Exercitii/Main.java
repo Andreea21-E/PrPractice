@@ -1,8 +1,16 @@
 package Exercitii;
 
+import Exercitii.CompositionEx.*;
+import Exercitii.EmailAplication.Email;
 import Exercitii.Section4.*;
 import Exercitii.Section5.*;
 import Exercitii.Section6.*;
+import Exercitii.Section6.Cylinder.Circle;
+import Exercitii.Section6.Cylinder.Cylinder;
+import Exercitii.Section6.PoolArea.Cuboid;
+import Exercitii.Section6.PoolArea.Rectangle;
+import Exercitii.Section7.Composition.*;
+import sun.security.krb5.internal.crypto.Des;
 
 public class Main {
     public static void main(String[] args) {
@@ -292,16 +300,61 @@ public class Main {
         carpetCalculator = new CarpetCalculator(floor, carpet);
         System.out.println("total=" + carpetCalculator.getTotalCost());
 
+        System.out.println("\n" + "******* Cylinder ******");
+        Circle circle = new Circle(3.75);
+        System.out.println("Circle.radius=" + circle.getRadius());
+        System.out.println("Circle.radius=" + circle.getArea());
 
-        Circle circle=new Circle(3.75);
-        System.out.println("Circle.radius=" +circle.getRadius());
-        System.out.println("Circle.radius=" +circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("Cylinder.radius=" + cylinder.getRadius());
+        System.out.println("Cylinder.height=" + cylinder.getHeight());
+        System.out.println("Cylinder.area=" + cylinder.getArea());
+        System.out.println("Cylinder.volume=" + cylinder.getVolume());
 
-        Cylinder cylinder=new Cylinder(5.55,7.25);
-        System.out.println("Cylinder.radius=" +cylinder.getRadius());
-        System.out.println("Cylinder.height=" +cylinder.getHeight());
-        System.out.println("Cylinder.area=" +cylinder.getArea());
-        System.out.println("Cylinder.volume=" +cylinder.getVolume());
+        System.out.println("\n" + "******* Pool Area ******");
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle.width=" + rectangle.getWidth());
+        System.out.println("rectangle.length=" + rectangle.getLength());
+        System.out.println("rectangle.area=" + rectangle.getArea());
+
+        Cuboid cuboid = new Cuboid(5, 10, 5);
+        System.out.println("cuboid.width=" + cuboid.getWidth());
+        System.out.println("cuboid.length=" + cuboid.getLength());
+        System.out.println("cuboid.area=" + cuboid.getArea());
+        System.out.println("cuboid.volume=" + cuboid.getVolume());
+
+
+        System.out.println("\n" + "******* Room ******");
+        TV tv = new TV(90,70,5,"Samsung");
+        Desk desk= new Desk(90,50,100,"red");
+        Mattress myMattress=new Mattress(1900,1500,40,"memory foam");
+        Bed bed = new Bed(2000,1600,50,4,myMattress);
+        Room room = new Room(bed,tv,desk);
+        room.makingBed();
+
+//TODO - the email application is not finnish
+
+//        System.out.println("\n" + "******* Email app ******");
+//        Email email = new Email("Andrei","Popescu");
+
+
+
+        System.out.println("\n" + "******* Bedroom composition  ******");
+        Wall wall1=new Wall("West");
+        Wall wall2=new Wall("East");
+        Wall wall3=new Wall("South");
+        Wall wall4=new Wall("North");
+
+        Ceiling ceiling= new Ceiling(3,"red");
+        MyBed myBed= new MyBed("vintage",2,0.5,1,1);
+        Lamp lamp= new Lamp("vintage",false,3);
+
+        Bedroom bedroom= new Bedroom("Andrei bedroom",wall1,wall2,wall3,wall4,myBed,ceiling,lamp);
+
+       bedroom.makeBed();
+       bedroom.getLamp().turnOn();
+
+
     }
 }
 

@@ -1,4 +1,4 @@
-package Exercitii.Section6;
+package Exercitii.Section6.Cylinder;
 
 public class Cylinder extends Circle {
 
