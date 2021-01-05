@@ -10,6 +10,7 @@ import Exercitii.Section6.Cylinder.Cylinder;
 import Exercitii.Section6.PoolArea.Cuboid;
 import Exercitii.Section6.PoolArea.Rectangle;
 import Exercitii.Section7.Composition.*;
+import Exercitii.Section7.Encapsulation.Printer;
 import sun.security.krb5.internal.crypto.Des;
 
 public class Main {
@@ -353,6 +354,15 @@ public class Main {
 
        bedroom.makeBed();
        bedroom.getLamp().turnOn();
+
+
+
+        System.out.println("\n" + "******* Printer tool ******");
+
+        Printer printer= new Printer(5,20,false);
+        printer.fillTheTonner();
+        printer.printingPage(25);
+        System.out.println(printer.tonerLevel);
 
 
     }
