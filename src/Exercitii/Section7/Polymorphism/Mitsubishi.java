@@ -1,6 +1,6 @@
 package Exercitii.Section7.Polymorphism;
 
-public class Mitsubishi extends Car {
+public class Mitsubishi extends CarA {
     public Mitsubishi(int cylinder, String name) {
         super(cylinder, name);
     }

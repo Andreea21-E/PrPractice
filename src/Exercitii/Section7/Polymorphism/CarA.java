@@ -1,13 +1,13 @@
 package Exercitii.Section7.Polymorphism;
 
-public class Car {
+public class CarA {
 
     private boolean engine;
     private int cylinder;
     private String name;
     private int wheels;
 
-    public Car(int cylinder, String name) {
+    public CarA(int cylinder, String name) {
         this.cylinder = cylinder;
         this.name = name;
         this.engine = true;
@@ -34,4 +34,6 @@ public class Car {
     public String brake() {
         return "The car braked.";
     }
+
+
 }

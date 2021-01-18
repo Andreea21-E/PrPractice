@@ -11,6 +11,13 @@ import Exercitii.Section6.PoolArea.Cuboid;
 import Exercitii.Section6.PoolArea.Rectangle;
 import Exercitii.Section7.Composition.*;
 import Exercitii.Section7.Encapsulation.Printer;
+import Exercitii.Section7.OOP.DeluxeBurger;
+import Exercitii.Section7.OOP.Hamburger;
+import Exercitii.Section7.OOP.HealthyBurger;
+import Exercitii.Section7.Polymorphism.CarA;
+import Exercitii.Section7.Polymorphism.Ford;
+import Exercitii.Section7.Polymorphism.Holden;
+import Exercitii.Section7.Polymorphism.Mitsubishi;
 import sun.security.krb5.internal.crypto.Des;
 
 public class Main {
@@ -364,7 +371,53 @@ public class Main {
         printer.printingPage(25);
         System.out.println(printer.tonerLevel);
 
+        CarA carA=new CarA(8,"Base car");
+        System.out.println(carA.startEngine());
+        System.out.println(carA.accelerate());
+        System.out.println(carA.brake());
 
+
+        Ford ford=new Ford(6,"Ford Falcon");
+        System.out.println(ford.startEngine());
+        System.out.println(ford.accelerate());
+        System.out.println(ford.brake());
+
+        Mitsubishi mitsubishi=new Mitsubishi(6,"Outlander VEX 4WD");
+        System.out.println(mitsubishi.startEngine());
+        System.out.println(mitsubishi.accelerate());
+        System.out.println(mitsubishi.brake());
+
+        Holden holden=new Holden(6,"Holden Commodore");
+        System.out.println(holden.startEngine());
+        System.out.println(holden.accelerate());
+        System.out.println(holden.brake());
+        System.out.println(new Holden(2,"a").startEngine());
+
+
+
+        System.out.println("\n" + "******* Burger meniu ******"+"\n");
+
+        Hamburger hamburger= new Hamburger("Old Burger","beef","normal",2.3);
+        System.out.println(hamburger.calculateTotalPriceForBurger());
+
+        hamburger.addAddition1Name("tomato",0.3);
+//        System.out.println(hamburger.calculateTotalPriceForBurger());
+        hamburger.addAddition2Name("onion",0.2);
+        hamburger.addAddition3Name("cucumeber",0.25);
+        System.out.println(hamburger.calculateTotalPriceForBurger());
+
+        System.out.println("\n" + "*************"+"\n");
+        HealthyBurger healthyBurger=new HealthyBurger("beef",2.00);
+        healthyBurger.calculateTotalPriceForBurger();
+        healthyBurger.addHealthyAddition1Name("Lettuce",0.10);
+        healthyBurger.addHealthyAddition2Name("cheese bio",0.90);
+
+        System.out.println("Total healthy burger price "+healthyBurger.calculateTotalPriceForBurger());
+
+        System.out.println("\n" + "*************"+"\n");
+        DeluxeBurger deluxeBurger = new DeluxeBurger();
+        System.out.println(deluxeBurger.calculateTotalPriceForBurger());
+        deluxeBurger.addAddition1Name("hiu", 2);
     }
 }
 
